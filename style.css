@@ -85,7 +85,7 @@ body{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding-top: 4%;
+    padding-top: 3%;
     padding-right: 10%;
     padding-left: 10%;
 }
@@ -131,7 +131,6 @@ body{
 }
 
 .containerProdutos{
-    height: 600px;
     background-image: var(--cor-produtos);
     width: 100%;
     padding: 3% 6%;
@@ -142,24 +141,68 @@ body{
     align-items: center;
 }
 .cabecalhoProdutos .inputs{
-    display: flex;
-    gap: 20px;
-    margin-right: 9%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.4em;
 }
 .cabecalhoProdutos .inputs .inputPesquisa{
     background-color: rgba(227, 227, 227, 0.2);
     border: none;
-    padding: 7% 12%;
-    border-radius: 30px;
+    padding: 8% 10%;
+    border-radius: 3em;
+    outline: none;
+    color: #fff;
+    grid-column-start: 2;
+}
+.cabecalhoProdutos .inputs .inputPesquisa::placeholder{
+  color: rgba(255, 255, 255, 0.53);
+  font-size: 1.2em;
+  font-weight: 300;
 }
 .cabecalhoProdutos .inputs .botaoPesquisa{
     border: none;
-    padding: 7% 12%;
-    border-radius: 30px;
+    border-radius: 3em;
     background-image: var(--cor-botao);
     color: #fff;
+    font-size: 1.4em;
+    grid-column-start: 3;
+    width: 8em;
 }
 .dropdown #icon-menu{
-    font-size: 2em;
+    font-size: 3em;
     color: #fff;
+}
+
+.produtos{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  padding: 3% 5%;
+  grid-row-gap: 4%;
+  grid-column-gap: 2%;
+}
+.produtos .card-produtos{
+  height: 360px;
+  overflow: hidden;
+  width: 315px;
+  border-radius: 2em;
+  background-color: #1E0E5A;
+}
+.produtos .card-produtos .img-produto{
+  height: 50%;
+  background-color: #ffffff36;
+  border-radius: 2em;
+
+}
+.produtos .card-produtos .nome-produto{
+  display: inline-block;
+  background-color: #ffffff38;
+  min-width: 50%;
+  min-height: 5%;
+  margin: 4%;
+  border-radius: 2px;
+}
+}
+.produtos .card-produtos .price-about{
+  display: flex;
 }
