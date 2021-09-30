@@ -33,7 +33,7 @@
                 <div class="txt-banner">
                     <span>Bem-vindo a um mundo<br>Imaginario</span>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, eveniet reiciendis. Excepturi quasi delectus temporibus vel dolor illum, ea cum alias adipisci quaerat. <error!></error!>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, eveniet reiciendis. Excepturi quasi delectus temporibus vel dolor illum, ea cum alias adipisci quaerat.
                     </p>
                     <a href="#containerProdutos">Compre Agora</a>
                 </div>
@@ -41,7 +41,7 @@
                     <img src="img/ideiabanner.png" alt="">
                 </div>
             </section>
-            <section id="containerProdutos" class="containerProdutos"> 
+            <section id="containerProdutos" class="containerProdutos">
                 <div class="cabecalhoProdutos">
                     <div class="dropdown">
                         <i id="icon-menu" class='bx bx-menu-alt-left'></i>
@@ -53,26 +53,56 @@
                 </div>
                 <div class="produtos">
                   <div class="card-produtos">
-                    <div class="img-produto">
-                      
+                    <div class="img-produto loading">
                     </div>
-                    <span class="nome-produto"></span>
-                    <span></span>
+                    <div class="card-text">
+                      <h2 class="heading loading"></h2>
+                      <p class="para loading"></p>
+                    </div>
                     <div class="price-about">
-                      <span></span>
+                      <h3 class="price loading"></h3>
                       <input type="submit" name="" value="Saiba Mais">
                     </div>
                   </div>
                   <div class="card-produtos">
-                    
+                    <div class="img-produto loading">
+                    </div>
+                    <div class="card-text">
+                      <h2 class="heading loading"></h2>
+                      <p class="para loading"></p>
+                    </div>
+                    <div class="price-about">
+                      <h3 class="price loading"></h3>
+                      <input type="submit" name="" value="Saiba Mais">
+                    </div>
                   </div>
                   <div class="card-produtos">
-                    
+                    <div class="img-produto loading">
+                    </div>
+                    <div class="card-text">
+                      <h2 class="heading loading"></h2>
+                      <p class="para loading"></p>
+                    </div>
+                    <div class="price-about">
+                      <h3 class="price loading"></h3>
+                      <input type="submit" name="" value="Saiba Mais">
+                    </div>
                   </div>
                 </div>
             </section>
         </main>
         <footer></footer>
     </section>
+    <script type="text/javascript">
+      const imgContainer = document.querySelector('.img-produto');
+      const heading = document.querySelector('.heading');
+      const para = document.querySelector('.para')
+      
+      // setTimeout(()=>{
+      //   imgContainer.classList.remove('loading');
+      //   heading.classList.remove('loading');
+      //   para.classList.remove('loading');
+      // }, 5000);
+    </script>
 </body>
 </html>
