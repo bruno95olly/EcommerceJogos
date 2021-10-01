@@ -140,30 +140,76 @@
   }
 }
 @media (max-width: 420px){
+  .header{
+    padding: 8% 6%;
+  }
   .card-produtos {
     width: 100%;
     height: 430px;
   }
   .cabecalhoProdutos .inputs .inputPesquisa{
-      padding: 5% 8%;
-      max-width: 100px;
+    padding: 10% 8%;
+    max-width: 150px;
   }
   .cabecalhoProdutos .inputs .botaoPesquisa{
-      font-size: 0.9em;
+      font-size: 1.1em;
   }
   .banner-apresentacao .txt-banner{
-    padding-bottom: 8%;
+    padding-bottom: 20%;
   }
   .banner-apresentacao .txt-banner span {
-    font-size: 2.3em;
+    font-size: 3em;
   }
   .banner-apresentacao .txt-banner p {
-    font-size: .9em;
+    font-size: 1.2em;
   }
+  .banner-apresentacao .txt-banner a{
+    padding: 6% 8%;
+    font-size: 1.8em
+  }
+  .menuBurguer {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 100%;
+    transition: 1s;
+    left: -15px;
+  }
+  .contentMenu{
+    position: absolute;
+    left: -90px;
+    top: 140px;
+  }
+
 }
 @media (max-width: 370px){
   .card-produtos {
     height: 400px;
     width: 110%;
+  }
+  .banner-apresentacao .txt-banner a{
+    padding: 6% 6%;
+  }
+  .cabecalhoProdutos .inputs .botaoPesquisa{
+      font-size: 1em;
+  }
+  .cabecalhoProdutos .inputs .inputPesquisa{
+    max-width: 130px;
+  }
+
+
+}
+
+@media (max-width: 340px){
+  .banner-apresentacao .txt-banner a{
+    font-size: 1.5em;
+    padding: 6% 5%;
+  }
+  .cabecalhoProdutos .inputs .inputPesquisa{
+    max-width: 100px;
   }
 }
