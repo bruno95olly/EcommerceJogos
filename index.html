@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="menu-burguer.css">
     <title>Document</title>
     <script src="js/jquery.js"></script>
     <script src="js/ancora.js"></script>
-    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
-    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <script src="js/menu-burguer.js" defer></script>
+    <script src="js/placeholder-loading.js" defer></script>
 </head>
 <body>
     <section class="container">
@@ -109,62 +111,5 @@
         </main>
         <footer></footer>
     </section>
-    <script type="text/javascript">
-      const imgContainer = document.querySelector('.img-produto');
-      const heading = document.querySelector('.heading');
-      const para = document.querySelector('.para')
-
-      // setTimeout(()=>{
-      //   imgContainer.classList.remove('loading');
-      //   heading.classList.remove('loading');
-      //   para.classList.remove('loading');
-      // }, 5000);
-
-      let eventClick = false;
-
-      function fun(){
-        var menuBurguer = document.getElementById('menuBurguer');
-        var btn1 = document.getElementById('block1');
-        var btn2 = document.getElementById('block2');
-        var btn3 = document.getElementById('block3');
-        var genero = document.getElementById('generos');
-
-        if (eventClick) {
-          eventClick=!eventClick;
-
-
-          btn1.style.transform = "rotate(0deg)";
-          btn2.style.transform = "rotate(0deg)";
-          btn3.style.transform = "rotate(0deg)";
-          btn3.style.marginLeft = "20px";
-
-          contentMenu.style.width = "0px";
-          contentMenu.style.height = "0px";
-
-          contentMenu.style.animation = "menuAnimationI 2s"
-
-          genero.style.opacity = "0";
-
-        }
-        else{
-          eventClick=!eventClick;
-
-
-          btn1.style.transform = "rotate(40deg)";
-          btn2.style.transform = "rotate(-40deg)";
-          btn3.style.transform = "rotate(40deg)";
-          btn3.style.marginLeft = "25px";
-
-          contentMenu.style.width = "300px";
-          contentMenu.style.height = "240px";
-
-          contentMenu.style.animation = "menuAnimationF 2s"
-          genero.style.opacity = "1"
-
-
-
-        }
-      }
-    </script>
 </body>
 </html>
