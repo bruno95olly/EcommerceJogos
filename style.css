@@ -13,6 +13,7 @@
      --cor-botao: linear-gradient(90deg, #702FA3, #5317A6);
      --cor-banner: linear-gradient(135deg, #04050D, #1D0440, #090426);
      --cor-produtos: linear-gradient(135deg, #5317A6, #2A094E 70%);
+     --cor-destaques: linear-gradient(135deg, #9143CB, #5A27B0);
 }
 body{
     -moz-background-image: var(--cor-banner);
@@ -129,7 +130,7 @@ body{
     background-image: var(--cor-produtos);
     width: 100%;
     padding: 3% 6%;
-    
+    overflow: hidden;
 }
 .containerPromocoes{
   position: relative;
@@ -304,6 +305,7 @@ body{
   display: flex;
   justify-content: space-between;
   padding: 6% 5% 0 5%;
+  overflow: hidden;
 }
 .empresaContainer .imgEmpresa{
   width: 50%;
@@ -328,11 +330,40 @@ body{
   margin-bottom: 5%;
   color: #2A094E;
 }
-footer{
-  height: 600px;
+.reveal{
+  position: relative;
+  left:200px;
+  transition: all 2s ease;
+  opacity: 0;
+}
+.reveal.active{
+    opacity: 1;
+    left: 0px;
+}
+.revealLeft{
+  position: relative;
+  right:200px;
+  transition: all 2s ease;
+  opacity: 0;
+}
+.revealLeft.active{
+    opacity: 1;
+    right: 0px;
+}
+.destaquesLoja{
+  padding: 3% 6%;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: var(--cor-destaques);
+}
+.destaquesLoja h2{
+  color: #fff;
+  font-size: 3em;
+}
+footer{
+
 }
 
