@@ -12,10 +12,9 @@
 :root{
      --cor-botao: linear-gradient(90deg, #702FA3, #5317A6);
      --cor-banner: linear-gradient(135deg, #04050D, #1D0440, #090426);
-     --cor-produtos: linear-gradient(135deg, #5317A6, #2A094E);
+     --cor-produtos: linear-gradient(135deg, #5317A6, #2A094E 70%);
 }
 body{
-    webkit-background-image: var(--cor-banner);
     -moz-background-image: var(--cor-banner);
      -ms-background-image: var(--cor-banner);
       -o-background-image: var(--cor-banner);
@@ -24,7 +23,6 @@ body{
 .header{
     width: 100%;
     display: flex;
-    webkit-display: flex;
     -moz-display: flex;
      -ms-display: flex;
       -o-display: flex;
@@ -60,28 +58,14 @@ body{
     font-weight: 300;
 }
 .header nav ul li a:hover:after{
-    content: '';
-    width: calc(100% + 16px);
-    height: 3px;
-    background-color: #702fa391;
-    position: absolute;
-    bottom: 0;
-    left: -8px;
-    animation: sla 1s ease-out;
-    z-index: -1;
-}
-@keyframes sla{
-    0%{
-        height: 3px;
-    }
-    50%{
-        height: 100%;
-        opacity: 0.3;
-    }
-    100%{
-        height: 3px;
-        opacity: 0;
-    }
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: #8c40c7;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1
 }
 .header .img-rs{
     display: flex;
@@ -141,16 +125,46 @@ body{
     height: 575px;
 }
 
-.containerProdutos{
+.containerProdutos, .containerPromocoes{
     background-image: var(--cor-produtos);
     width: 100%;
     padding: 3% 6%;
+    
+}
+.containerPromocoes{
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+}
+.containerPromocoes h2{
+  text-align: center;
+  font-size: 2.4em;
+  color: #fff;
+  z-index: 2;
+}
+.controle{
+  height: 95%;
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  bottom: 0;
+  transform: rotate(-15deg);
+  animation: 1.5s linear infinite alternate control;
+}
+@keyframes control{
+  0%{
+    bottom: 0;
+  }
+  100%{
+    bottom: 25px;
+  }
 }
 .containerProdutos .cabecalhoProdutos{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .cabecalhoProdutos .inputs{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -192,32 +206,35 @@ body{
   grid-column-gap: 2%;
 }
 .card-produtos{
-  height: 380px;
+  height: 420px;
   overflow: hidden;
   width: 80%;
-  border-radius:4px;
-  background-color: #1E0E5A;
-  padding: 3%;
+  border-radius: 30px;
+  background-color: #15074a;
+  padding-bottom: 3%;
+  z-index: 2;
 }
  .img-produto{
   height: 50%;
   width: 100%;
-  background-color: #ffffff36;
-  border-radius: 4px;
+  border-radius: 30px;
   margin-bottom: 4%;
 
+}
+.card-text{
+  padding: 3%;
 }
 .heading{
   font-size: 1.6em;
   margin-bottom: 4px;
-  color: #fff;
+  color: #b8b8b8;
 }
 .para{
   font-size: .8em;
-  color: #fff;
+  color: #b8b8b8;
 }
 .price{
-  color: #fff;
+  color: #b8b8b8;
   font-size: 1.2em;
 }
 .loading{
@@ -269,7 +286,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10%;
+  gap: 8%;
 }
 .produtos .card-produtos .price-about input{
   background-image: var(--cor-botao);
@@ -279,4 +296,43 @@ body{
   font-weight: 500;
   color: #fff;
   border-radius: 30px;
+  margin-right: auto;
 }
+.empresaContainer{
+  width: 100%;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+  padding: 6% 5% 0 5%;
+}
+.empresaContainer .imgEmpresa{
+  width: 50%;
+  display: flex;
+}
+.empresaContainer .imgEmpresa img{
+  width: 95%;
+  object-position: 0px 10px;
+}
+.empresaContainer .sobreEmpresa{
+  width: 50%;
+}
+.empresaContainer .sobreEmpresa h2{
+  font-size: 3em;
+  margin: 5% 0;
+  text-align: center;
+  color: #5317A6;
+}
+.empresaContainer .sobreEmpresa p{
+  padding: 0 5%;
+  font-size: 1.25em;
+  margin-bottom: 5%;
+  color: #2A094E;
+}
+footer{
+  height: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
