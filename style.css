@@ -58,15 +58,19 @@ body{
     font-size: 1.4em;
     font-weight: 300;
 }
-.header nav ul li a:hover:after{
+.header nav ul li a::after{
   content: '';
-  width: 100%;
+  width: 0px;
   height: 3px;
   background-color: #8c40c7;
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
-  z-index: -1
+  transition: .5s;
+}
+.header nav ul li a:hover:after{
+  width: 100%;
+
 }
 .header .img-rs{
     display: flex;
