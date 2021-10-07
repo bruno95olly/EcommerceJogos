@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @font-face{
     font-family: avengers;
-    src: url(avengeance.ttf);
+    src: url(fonts/avengeance.ttf);
 }
 *{
     margin: 0%;
@@ -41,7 +41,8 @@ body{
     transition: 0.25s;
 }
 .header h1 a:hover{
-    letter-spacing: 6px;
+  text-shadow: 8px 8px 6px #ffffff61;
+
 }
 .header nav ul{
     display: flex;
@@ -65,11 +66,12 @@ body{
   background-color: #8c40c7;
   position: absolute;
   bottom: -5px;
-  left: 0;
+  left: 50%;
   transition: .5s;
 }
 .header nav ul li a:hover:after{
   width: 100%;
+  left: 0
 
 }
 .header .img-rs{
@@ -141,7 +143,7 @@ body{
   overflow: hidden;
   z-index: -1;
 }
-.containerPromocoes h2{
+.containerPromocoes .headingTitulo{
   text-align: center;
   font-size: 2.4em;
   color: #fff;
@@ -367,7 +369,120 @@ body{
   color: #fff;
   font-size: 3em;
 }
-footer{
-
+.lojasContatos{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #1D0440;
+  padding: 4% 15%;
 }
-
+.lojas{
+  width: 50%;
+}
+.lojas h3, .contatos h3{
+  background: var(--cor-destaques);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 600;
+  font-size: 1.8em;
+  margin-bottom: 2%;
+}
+.lojasUnidades{
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+.enderecoLoja{
+  display: flex;
+  margin-left: 2%
+}
+.unidade{
+  margin-bottom: 2%;
+  display: block;
+  color: #fff;
+  font-weight: 200;
+  font-size: 1.4em;
+}
+.enderecoLoja img{
+  width: 15%;
+  margin-right: 4%
+}
+.enderecosFormatacao{
+  color: #fff;
+    font-weight: 300;
+}
+.contatos{
+  width: 50%;
+}
+.contatos h3{
+  margin-left: 52%;
+}
+.enviarContato{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.enviarContato input[type=text],
+.enviarContato input[type=email],
+.enviarContato input[type=tel]{
+  margin-bottom: 3%;
+  width: 50%;
+  outline: none;
+  border: none;
+  padding: 2%;
+  border-radius: 25px;
+  background-color: #ffffff24;
+}
+.enviarContato input::placeholder{
+  color: rgba(255, 255, 255, 0.53);
+  font-size: 1.2em;
+  font-weight: 300;
+}
+.btnForm{
+  text-align: center;
+  width: 30%;
+  background: var(--cor-botao);
+  color: #fff;
+  font-size: 1.3em;
+  border-radius: 50px;
+  margin-bottom: 3%;
+  outline: none;
+  border: none;
+  padding: 2%;
+}
+footer{
+  width: 100%;
+  height: 200px;
+  padding: 2% 6%;
+  background-color: #16042F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.infoContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+.guiasInfo{
+  margin-bottom: 1%;
+  border-bottom: solid 1px #999999;
+}
+.guiasInfo ul{
+  display: flex;
+  gap: 40px;
+  margin-bottom: 2%;
+  width: 900px;
+  justify-content: center;
+}
+.guiasInfo ul li{
+  list-style: none;
+  color: #fff;
+}
+.termosInfo{
+  text-align: center;
+}
+.termosInfo p{
+  color: #999999;
+}

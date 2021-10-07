@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
-    <link rel="stylesheet" href="menu-burguer.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/menu-burguer.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <link rel="stylesheet" href="carrossel.css">
+
+    <link rel="stylesheet" href="css/carrossel.css">
     <title>EndGame Commerce</title>
     <script src="js/jquery.js"></script>
     <script src="js/ancora.js"></script>
@@ -21,6 +21,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
     <script src="js/placeholderLoading.js" defer></script>
+    <script src="js/carrossel.js" defer></script>
+    <script src="js/reveal.js" defer></script>
 </head>
 <body>
     <section class="container">
@@ -29,10 +31,10 @@
             <nav>
                 <ul>
                     <li><a href="#aEmpresa">A Empresa</a></li>
-                    <li><a href="#">Lojas</a></li>
+                    <li><a href="#lojas">Lojas</a></li>
                     <li><a href="#containerPromocoes">Promoções</a></li>
-                    <li><a href="#">Destaques</a></li>
-                    <li><a href="#">Contatos</a></li>
+                    <li><a href="#destaquesLoja">Destaques</a></li>
+                    <li><a href="#contatos">Contatos</a></li>
                 </ul>
             </nav>
             <div class="img-rs">
@@ -67,15 +69,19 @@
                           <ul class="menuItens">
                             <li class="itensLista">Ação</li>
                             <li class="itensLista">Aventura</li>
+                            <li class="itensLista">Corrida</li>
                             <li class="itensLista">Esportes</li>
-                            <li class="itensLista">RPG</li>
+                            <li class="itensLista">Estratégia / RPG</li>
+                            <li class="itensLista">Guerra</li>
+                            <li class="itensLista">Infantil</li>
                             <li class="itensLista">Tiro</li>
+                            <li class="itensLista">Terror</li>
                           </ul>
                       </div>
                     </div>
                     <div class="inputs">
                         <input type="search" class="inputPesquisa" placeholder="Busque um produto..." size="35">
-                        <input type="submit" class="botaoPesquisa" value="Buscar">
+                        <input type="button" class="botaoPesquisa" value="Buscar">
                     </div>
                 </div>
                 <div class="produtos reveal">
@@ -88,7 +94,7 @@
                     </div>
                     <div class="price-about">
                       <h3 class="price loading closeLoading"></h3>
-                      <input type="submit" name="" value="Saiba Mais">
+                      <input type="button" name="" value="Saiba Mais">
                     </div>
                   </div>
                   <div class="card-produtos">
@@ -100,7 +106,7 @@
                     </div>
                     <div class="price-about">
                       <h3 class="price loading closeLoading"></h3>
-                      <input type="submit" name="" value="Saiba Mais">
+                      <input type="button" name="" value="Saiba Mais">
                     </div>
                   </div>
                   <div class="card-produtos">
@@ -112,7 +118,7 @@
                     </div>
                     <div class="price-about">
                       <h3 class="price loading closeLoading"></h3>
-                      <input type="submit" name="" value="Saiba Mais">
+                      <input type="button" name="" value="Saiba Mais">
                     </div>
                   </div>
             </section>
@@ -127,7 +133,7 @@
             </section>
             <section id="containerPromocoes" class="containerPromocoes">
               <img class="controle" src="img/controle.png" alt="">
-              <h2>Nossas Promoções</h2>           
+              <h2 class="headingTitulo">Nossas Promoções</h2>
               <div class="produtos reveal">
                 <div class="card-produtos">
                   <div class="img-produto loading closeLoading">
@@ -138,7 +144,7 @@
                   </div>
                   <div class="price-about">
                     <h3 class="price loading closeLoading"></h3>
-                    <input type="submit" name="" value="Saiba Mais">
+                    <input type="button" name="" value="Saiba Mais">
                   </div>
                 </div>
                 <div class="card-produtos">
@@ -150,7 +156,7 @@
                   </div>
                   <div class="price-about">
                     <h3 class="price loading closeLoading"></h3>
-                    <input type="submit" name="" value="Saiba Mais">
+                    <input type="button" name="" value="Saiba Mais">
                   </div>
                 </div>
                 <div class="card-produtos">
@@ -162,7 +168,7 @@
                   </div>
                   <div class="price-about">
                     <h3 class="price loading closeLoading"></h3>
-                    <input type="submit" name="" value="Saiba Mais">
+                    <input type="button" name="" value="Saiba Mais">
                   </div>
                 </div>
           </section>
@@ -221,44 +227,58 @@
               </div>
             </div>
           </section>
+          <section class="lojasContatos">
+            <div id="lojas" class="lojas">
+              <h3>Nossas Lojas</h3>
+              <div class="lojasUnidades">
+                <span class="unidade">Unidade Jandira</span>
+                <div class="enderecoLoja">
+                  <img src="img/controle.png" alt="">
+                  <span class="enderecosFormatacao">
+                    <p>Rua Capricornio, 821</p>
+                    <p>Jd. America 06436-110</p>
+                  </span>
+                </div>
+              </div>
+              <div class="lojasUnidades">
+                <span class="unidade">Unidade Barueri</span>
+                <div class="enderecoLoja">
+                  <img src="img/controle.png" alt="">
+                  <span class="enderecosFormatacao">
+                    <p>Rua São João, 132</p>
+                    <p>Parque Imperial 06429-831</p>
+                  </span>
+                </div>
+            </div>
+          </div>
+            <div id="contatos" class="contatos">
+              <h3>Entre em contato:</h3>
+              <form class="enviarContato" action="index.html" method="post">
+                <input type="text" name="nomeCliente" value="" placeholder="nome">
+                <input type="email" name="emailCliente" value="" placeholder="email">
+                <input type="tel" name="celularCliente" value="" placeholder="celular">
+                <input class="btnForm" type="submit" name="btnEnviarFormulario" value="enviar">
+              </form>
+            </div>
+          </section>
         </main>
         <footer>
-          
+          <div class="infoContainer">
+            <div class="guiasInfo">
+              <ul>
+                <li>Sobre</li>
+                <li>Informações Legais</li>
+                <li>Contatos</li>
+                <li>Termos de Serviço</li>
+                <li>Politica de Privacidade</li>
+              </ul>
+            </div>
+            <div class="termosInfo">
+              <p>Este site foi totalmente desenvolvido para  fins estudantis</p>
+              <p>&copy; 2021 Bruno Olly Todos os  direitos reservados</p>
+            </div>
+          </div>
         </footer>
     </section>
-    <script src="js/carrossel.js"></script>
-    <script>
-      window.addEventListener('scroll', reveal);
-
-      function reveal(){
-        var reveals = document.querySelectorAll('.reveal');
-        var revealsLeft = document.querySelectorAll('.revealLeft');
-        
-        for(var i = 0; i < reveals.length; i++){
-          var windowheight = window.innerHeight;
-          var revealtop = reveals[i].getBoundingClientRect().top;
-          var revealpoint = 150;
-
-          if(revealtop < windowheight - revealpoint){
-            reveals[i].classList.add('active');
-          }
-          else{
-            reveals[i].classList.remove('active');
-          }
-        }
-        for(var i = 0; i < revealsLeft.length; i++){
-          var windowheight = window.innerHeight;
-          var revealtop = revealsLeft[i].getBoundingClientRect().top;
-          var revealpoint = 150;
-
-          if(revealtop < windowheight - revealpoint){
-            revealsLeft[i].classList.add('active');
-          }
-          else{
-            revealsLeft[i].classList.remove('active');
-          }
-        }
-      }
-    </script>
 </body>
 </html>

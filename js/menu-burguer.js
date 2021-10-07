@@ -34,7 +34,7 @@ function fun(){
     btn3.style.marginLeft = "25px";
 
     contentMenu.style.width = "300px";
-    contentMenu.style.height = "240px";
+    contentMenu.style.height = "320px";
 
     contentMenu.style.animation = "menuAnimationF 2s"
     genero.style.opacity = "1"
