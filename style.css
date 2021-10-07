@@ -154,14 +154,14 @@ body{
   right: 0;
   bottom: 0;
   transform: rotate(-15deg);
-  animation: 1.5s linear infinite alternate control;
+  animation: 1s linear infinite alternate control;
 }
 @keyframes control{
   0%{
     bottom: 0;
   }
   100%{
-    bottom: 25px;
+    bottom: 35px;
   }
 }
 .containerProdutos .cabecalhoProdutos{
